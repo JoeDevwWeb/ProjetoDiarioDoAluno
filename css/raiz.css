@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,100&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  user-zoom: none;
+  box-sizing: border-box;
+  user-select: none;
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+/*--------------------------------*/
+/*Codigo fonte*/
+
+::-webkit-scrollbar { /*Pra não ter Scroll*/
+    display: none;
+}
+.header{
+    width: 100%;
+    height: 3%;
+    padding: 2%;
+    background: cadetblue;
+    display: flex;
+    align-items: center;
+}
+#btnOpen {
+  cursor: pointer;
+  font-size: 1.4rem;
+  padding: 10px;
+}
+/* logo */
+.header .logo a img{
+    width: 6rem;
+}
+.header .logo a{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+/*--------------------------------*/
+/* Barra de ferramentas */
+.barraferramentas{
+  background: teal;
+  position: fixed;
+  left: -240px;
+  top: 0;
+  width: 240px;
+  height: 100%;
+  transition: 0.4s ease;
+}
+.barraferramentas ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.barraferramentas ul li{
+  background: white;
+  width: 80%;
+  border-radius: 10px;
+}
+.barraferramentas ul li a{
+  display: flex;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  padding: 15px 10px;
+  align-items: center;
+  font-weight: bolder;
+  gap: 5px;
+}
+.barraferramentas ul li a:hover{
+  background: rgba(0, 128, 128, 0.6);
+}
+.barraferramentas #deslogar{
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
+  position: relative;
+  left: 170px;
+}
+.barraferramentas #btnClose{
+    font-size: 1.6rem;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+}
+#btnOpen:hover, #btnClose:hover{
+    color: white;
+}
+
+/*-------------------------------*/
+/*Area de postagem de projetos*/
+.addProjeto{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.addDados{
+  width: 60%;
+  border-radius: 20px;
+  background: white;
+  padding: 2%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border: 3px solid black;
+}
+.addDados h2{
+  padding: 2%;
+}
+.addDados form{
+  width: 100%;
+  height: 100%;
+}
+.dadosPrincipais{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.descrisaoProjeto, #textProjeto{
+  width: 100%;
+}
+.addDados form input{
+ width: 200px;
+ 
+}
+
+.addDados form label img{
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border: 0.3px solid black;
+}
+
+.addDados form input[type='file']{
+  display: none;
+}
+.addDados form button {
+  background: teal;
+  color: white;
+  height: 40px;
+  width: 200px;
+  border-radius: 20px;
+  border: transparent;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+
+/*----------------------------------*/
+/*Main*/
+.main{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+}
+
+/*--------------------------*/
+/*Loading*/
+.loading{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinner {
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #22a6b3;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

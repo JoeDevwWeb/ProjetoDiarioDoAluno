@@ -1,0 +1,64 @@
+/*----------------------Pagina de login e cadastro*/
+.body{
+  background: white;
+}
+.areaCadrastro {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+.areaCadrastro form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.areaCadrastro form input{
+    padding-left: 10px;
+    border: 0.3px solid rgba(0, 0, 0, 0.2);
+    border-radius: 9px;
+    width: 500px;
+    height: 30px;
+    outline: 0;
+}
+.areaCadrastro form input:hover{
+    border: 0.3px solid rgba(0, 0, 0, 1)
+}
+.areaCadrastro form input::placeholder{
+    font-size: 1rem;
+}
+.areaCadrastro form button{
+    background: teal;
+    color: white;
+    height: 35px;
+    width: 190px;
+    border-radius: 15px;
+    border: 0.3px solid transparent;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+.areaCadrastro form button:hover{
+    background: rgba(0, 128, 128, 0.8);
+}
+.areaCadrastro .logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+}
+.areaCadrastro .logo img{
+    width: 10rem;
+}
+
+@media (max-width: 800px) {
+  
+.areaCadrastro form input {
+  width: 250px;
+  height: 30px;
+}
+}

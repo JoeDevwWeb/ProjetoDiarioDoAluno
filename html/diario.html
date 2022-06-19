@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diário</title>
+  <link rel="stylesheet" href="../css/raiz.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <!-- Botao de Ferramentas -->
+    <div class="btnFerramentas">
+      <i id="btnOpen" class="fa-solid fa-bars"></i>
+    </div>
+    <!-- Logo -->
+    <div class="logo">
+      <a href="./home.html">
+        <img id="logo" src="../imagens/logo.png" alt="logo do site">
+        <p>Diário do Aluno</p>
+      </a>
+    </div>
+  </header>
+
+  <aside class="barraferramentas">
+    <!-- Barra de ferramentas -->
+    <div class="btnFerramentas">
+      <i id="btnClose" class="fa-solid fa-close"></i>
+    </div>
+    <ul>
+      <li><a href="./home.html">
+          <i class="fa-solid fa-house"></i>
+          Início</a></li>
+
+      <li><a href="./projetos.html">
+          <i class="fa-solid fa-award"></i>
+          Projetos</a></li>
+
+      <li><a href="./diario.html">
+          <i class="fa-solid fa-book"></i>
+          Diário</a></li>
+
+      <li><a id="addProjeto">
+          <i class="fa-solid fa-plus"></i>
+          Adicionar
+        </a></li>
+    </ul>
+  </aside>
+
+
+
+
+
+
+  <div class="addProjeto">
+    <div class="addDados">
+      <form>
+        <div id="btnAdd">
+          <i id="closeAdd" class="fa-solid fa-close"></i>
+          <h2>Adicionar Projeto</h2>
+        </div>
+
+        <div class="dadosPrincipais">
+          <input type="text" id="titulo" placeholder="Título do projeto">
+          <input type="text" id="nomeAutor" placeholder="Autor">
+          <label for="arquivo" id="photo">
+            <img src="../imagens/camera.png" id="Foto">
+          </label>
+          <input type="file" name="arquivo" id="arquivo" accept="image/*">
+          <textarea name="diario" id="textProjeto" cols="30" rows="10" placeholder="Descrição do projeto"></textarea>
+          <button type="button" onclick="postar()">Postar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+<!-- Scripts -->
+<script defer src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/9.6.7/firebase-storage-compat.js"></script>
+
+
+<script src="https://kit.fontawesome.com/f6748ef481.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script defer src="../script/index.js"></script>
+<script src="../script/btn.js"></script>
+
+
+</html>

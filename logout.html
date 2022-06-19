@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Cadastrar-se</title>
+</head>
+<body>
+
+<div class="login">
+    <div class="areaCadrastro">
+
+        <div class="logo">
+            <img src="../imagens/logo.png" alt="Foto da logo">
+            <h2>Cadastrar-se</h2>
+        </div>
+         
+          <form>
+    
+            <input type="email" id="email" name="email" placeholder="Email" required autofocus>
+            
+            <input type="password" id="password" name="password" placeholder="Senha" required maxlength="6">
+
+            <input type="password" id="password" name="password" placeholder="Confirmar senha" required maxlength="6">
+            
+            <button type="button" onclick ="registrar()">Entrar</button>
+        </form>
+    
+    </div>
+</div>
+</body>
+  <!-- Script -->
+  <script defer src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+  <script defer src="./script/index.js"></script>
+  <script defer src="./script/auth.js"></script>
+</html>
