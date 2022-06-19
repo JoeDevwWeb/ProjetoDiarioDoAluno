@@ -1,4 +1,4 @@
-const database = firebase.firestore();
+
 apresentarIni();
 
 function apresentarIni(){
