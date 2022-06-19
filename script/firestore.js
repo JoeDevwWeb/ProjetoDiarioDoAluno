@@ -47,7 +47,7 @@ function postar() {
       .add(obj)
       .then(()=>{
         loadingOut();
-        window.location.href = './home.html'
+        window.location.href = './home.html';
       }).catch(e=>{
         alert('Nao deu certo postar o projeto');
       })
