@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home</title>
   <link rel="stylesheet" href="../css/raiz.css">
+  <link rel="stylesheet" href="../css/home.css">
  </head>
 <body>
   
@@ -45,12 +46,89 @@
             <i class="fa-solid fa-plus"></i>
             Adicionar
           </a></li>
-          
         </ul>
         <div onclick="logout()">
           <i id="deslogar" class="fa-solid fa-arrow-right-from-bracket"></i>
         </div>
       </aside>
+      
+  <main class="main">
+            <div>
+                <div class="publicacoes">
+
+                        <div class="projetos">
+                                <img id="imgIni"  src="./imagens/perfil.jpg">
+                                <h2 id="Titulo"></h2>
+                                <p id="autor"></p>
+                        </div>
+            
+                       <div class="texto">
+                            <div class="editorTexto">
+                                <p>
+                                <span>Como foi seu estagio hoje?</span>
+                                <!-- Botao de postagem da rotina de estágio -->
+                                <span onclick="postTexto()"><i class="fa-solid fa-plus"></i></span>
+                                </p>
+                                <textarea name="diario" id="postagem" cols="30" rows="10" maxlength="1000"></textarea>
+                                <input type="text" name="Autor" id="Autor" placeholder="Autor" required>
+                                <input type="text" id="Titulo" placeholder="Título" required>
+                            </div>
+                            <div class="estagio">
+                            
+                              <div class="tituloPost">
+                                <h2>importância do estágio</h2>
+                                <p>| maio 30, 2022 | por Julia </p>
+                              </div>
+                            
+                              <div class="textoEstagio">
+                                <p>O Estágio é a oportunidade para que os estudantes coloquem em prática os
+                                  conhecimentos adquiridos em sala de aula, de maneira que possam vivenciar no dia a dia a
+                                  teoria, absorvendo melhor os conhecimentos, podendo refletir e confirmar sobre a sua
+                                  escolha. A partir da minha escolha de estudar administração de empresas, posso dizer com
+                                  clareza de que escolhi a área certa para minha atuação. Como prestadora de serviço posso
+                                  conceituar como: “um trabalho realizado a titulo de aluguel de mão-de-obra física ou
+                                  intelectual, em outras palavras e o trabalho realizado por terceiros”.
+                                </p>
+                              </div>
+                            
+                             </div>
+                          </div>
+                      </div>
+                </div>
+              <div class="postagens">
+                
+                  <ol id='projetosIni'>
+                    <li>
+                      <div class="projeto">
+                        <img src="../imagens/logo.png" alt="projetos">
+                        <div class="tituloPost">
+                          <h2>O quão maravilhoso são as maquinas!</h2>
+                          <p>| maio 12, 2022 | por Julia </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="projeto">
+                        <img src="../imagens/logo.png" alt="projetos">
+                        <div class="tituloPost">
+                          <h2>O quão maravilhoso são as maquinas!</h2>
+                          <p>| maio 12, 2022 | por Julia </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="projeto">
+                        <img src="../imagens/logo.png" alt="projetos">
+                        <div class="tituloPost">
+                          <h2>O quão maravilhoso são as maquinas!</h2>
+                          <p>| maio 12, 2022 | por Julia </p>
+                        </div>
+                      </div>
+                    </li>
+                  </ol>
+                  
+              </div>
+     </main>
   
   <div class="addProjeto">
     <div class="addDados">
@@ -74,6 +152,7 @@
     </div>
   </div>
   
+  
   </body>
 <!-- Scripts -->
     <script defer src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
@@ -86,6 +165,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script defer src="../script/index.js"></script>
     <script src="../script/btn.js"></script>
+    <script defer src="../script/firestore.js"></script>
     <script defer src="../script/guarda.js"></script>
     
 </html>

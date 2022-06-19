@@ -1,0 +1,41 @@
+main ol{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ProjetoAdd{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    padding: 10px;
+    background: rgba(1, 1, 1, 0.2);
+    border-radius: 10px;
+    border: 0.2px solid transparent;
+}
+.ProjetoAdd img {
+    width: 500px;
+    height: 500px;
+    border-radius: 7px;
+    object-fit: cover;
+}
+.ProjetoAdd p{
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+
+
+.ProjetoAdd{
+  width: 90%;
+}
+.ProjetoAdd img{
+  width: 400px;
+  height: 400px;
+}
+}
