@@ -1,4 +1,3 @@
-const storage = firebase.storage();
 const database = firebase.firestore();
 
 listaDiario();
