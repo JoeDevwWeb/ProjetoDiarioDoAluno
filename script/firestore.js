@@ -47,10 +47,7 @@ function postar() {
       .add(obj)
       .then(()=>{
         loadingOut();
-        $('.barraferramentas')
-            .css("left","-240px");
-        $('.addProjeto')
-          .css('display', 'none');
+        window.location.href = './home.html'
       }).catch(e=>{
         alert('Nao deu certo postar o projeto');
       })
