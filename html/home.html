@@ -64,15 +64,19 @@
             
                        <div class="texto">
                             <div class="editorTexto">
+                                <form id="reset">
                                 <p>
                                 <span>Como foi seu estagio hoje?</span>
                                 <!-- Botao de postagem da rotina de estágio -->
-                                <span onclick="postTexto()"><i class="fa-solid fa-plus"></i></span>
+                                <span onclick="postaDiario()"><i class="fa-solid fa-plus"></i></span>
                                 </p>
+                              
                                 <textarea name="diario" id="postagem" cols="30" rows="10" maxlength="1000"></textarea>
                                 <input type="text" name="Autor" id="Autor" placeholder="Autor" required>
-                                <input type="text" id="Titulo" placeholder="Título" required>
+                                <input type="text" name="Titulo" id="tituloDiario" placeholder="Título" required>
+                                </form>
                             </div>
+                            
                             <div class="estagio">
                             
                               <div class="tituloPost">
@@ -164,8 +168,8 @@
     <script src="https://kit.fontawesome.com/f6748ef481.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script defer src="../script/index.js"></script>
-    <script src="../script/btn.js"></script>
+    <script defer src="../script/btn.js"></script>
     <script defer src="../script/firestore.js"></script>
     <script defer src="../script/guarda.js"></script>
     
-</html>
+</html> 

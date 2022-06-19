@@ -58,7 +58,7 @@
   justify-content: center;
 }
 /* area de texto */
-.editorTexto{
+.editorTexto #reset {
     width: 30rem;
     background: rgba(135, 207, 235, 0.144);
     padding: 10px;
@@ -68,7 +68,7 @@
     border-radius: 3px;
     justify-content: center;
 }
-.editorTexto input{
+.editorTexto #reset input{
   width: 30%;
   border-top: 0;
   border-left: 0;

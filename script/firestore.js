@@ -1,5 +1,5 @@
-const storage = firebase.storage();
-const database = firebase.firestore();
+
+
 // Prewview da imagem selecionada
   let photo = document.getElementById('Foto');
   let file = document.getElementById('arquivo');
@@ -16,7 +16,7 @@ file.addEventListener('change', (event) =>{
   leitor.readAsDataURL(file.files[0]);
 })
 
-async function postar() {
+function postar() {
   
   let titulo = document.getElementById('titulo').value;
   let nomeAutor = document.getElementById('nomeAutor').value;
@@ -24,12 +24,12 @@ async function postar() {
   let arquivo = document.getElementById('arquivo').files[0];
   loading();
 
-  await storage
+  storage
   .ref('projetos/')
   .child(arquivo.name)
   .put(arquivo);
   
-  await storage
+  storage
     .ref('projetos/')
     .child(arquivo.name)
     .getDownloadURL()
@@ -42,7 +42,7 @@ async function postar() {
         url: url
       }
       
-    firebase.firestore()
+   firebase.firestore()
       .collection('projetos')
       .add(obj)
       .then(()=>{
@@ -56,30 +56,4 @@ async function postar() {
 }
 
 // Salvar text
-
-function postTexto(){
- let nomeAutor = document.getElementById('Autor').value;
- let titulo = document.getElementById('Titulo').value;
- let texto = document.getElementById('postagem').value;
- 
-
- loading();
-  let obj = {
-        titulo: titulo,
-        Autor: nomeAutor,
-        texto: texto
-      }
-      
-    firebase.firestore()
-      .collection('diario')
-      .add(obj)
-      .then(doc=>{
-        loadingOut();
-        window.location.href = './home.html';
-      }).catch(e=>{
-        alert('Nao deu certo postar' + e);
-      })
-
- 
-}
 

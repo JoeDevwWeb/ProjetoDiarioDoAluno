@@ -1,7 +1,10 @@
+const storage = firebase.storage();
+const database = firebase.firestore();
+
 listaDiario();
-function listaDiario() {
+ function listaDiario() {
   loading();
-  database
+   database
     .collection("diario")
     .onSnapshot(function(documentos) {
 
@@ -11,7 +14,7 @@ function listaDiario() {
 
           const documento = changes.doc;
           const titulo = documento.data().titulo;
-          const autor = documento.data().Autor;
+          const autor = documento.data().autor;
           const texto = documento.data().texto;
 
 

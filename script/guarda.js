@@ -1,14 +1,16 @@
- apresentarIni();
-function apresentarIni() {
+const database = firebase.firestore();
+apresentarIni();
+
+function apresentarIni(){
   // Apresentar 
   loading();
   database
-    .collection("projetos")
+    .collection("projetos/")
     .onSnapshot(function(documentos) {
 
       documentos
         .docChanges()
-        .forEach(function(changes) {
+        .forEach(function(changes){
           
           const lista = document.getElementsByClassName('projetos');
 
@@ -25,14 +27,11 @@ function apresentarIni() {
           
           const Autor = document.getElementById('autor');
           Autor.innerHTML = ('| Por '+autor+' |');
-          loadingOut(); 
+ 
+          loadingOut();
           
-          lista.appendChild(Autor);
-          lista.appendChild(Titulo);
-          lista.appendChild(img);
   })
-  
-})
+ })
 }
  
  firebase.auth().onAuthStateChanged(user => {
@@ -53,3 +52,29 @@ async function logout() {
    alert("Erro ao fazer logout");
  });
 };
+
+  const formReset = document.getElementById('reset');
+function postaDiario(){
+  
+  const nomeAutor = document.getElementById('Autor').value;
+  const descricao = document.getElementById('postagem').value;
+  const titulo = document.getElementById('tituloDiario').value;
+  
+  loading();
+  let obj = {
+      titulo: titulo,
+      autor: nomeAutor,
+      texto: descricao
+}
+console.log(obj);
+   firebase.firestore()
+      .collection('diario')
+      .add(obj)
+      .then(()=>{
+        loadingOut();
+        formReset.reset();
+      }).catch(e=>{
+        alert('Nao deu certo postar o projeto');
+      })
+
+}
