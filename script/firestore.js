@@ -1,4 +1,5 @@
 const storage = firebase.storage();
+const database = firebase.firestore();
 
 // Prewview da imagem selecionada
   let photo = document.getElementById('Foto');
