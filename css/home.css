@@ -104,4 +104,7 @@
     text-align: justify;
 }
 
-
+.projeto img{
+  margin-bottom: 10px;
+  object-fit: cover;
+}
