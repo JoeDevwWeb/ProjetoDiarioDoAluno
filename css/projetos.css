@@ -12,9 +12,10 @@ main ol{
     justify-content: center;
     align-items: center;
     margin: 30px;
-    padding: 10px;
+    padding: 5px;
     background: rgba(1, 1, 1, 0.2);
     border-radius: 10px;
+    width: 500px;
     border: 0.2px solid transparent;
 }
 .ProjetoAdd img {
@@ -29,11 +30,11 @@ main ol{
 }
 
 @media (max-width: 800px) {
-
-
 .ProjetoAdd{
-  width: 90%;
+width: 400px;
+  
 }
+
 .ProjetoAdd img{
   width: 400px;
   height: 400px;
