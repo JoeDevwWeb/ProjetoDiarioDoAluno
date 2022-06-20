@@ -25,10 +25,11 @@ function postar() {
   let arquivo = document.getElementById('arquivo').files[0];
   loading();
 
-  storage
-  .ref('projetos/')
-  .child(arquivo.name)
-  .put(arquivo);
+   storage
+   .ref('projetos/')
+   .child(arquivo.name)
+   .put(arquivo);
+  
   
   storage
     .ref('projetos/')
@@ -43,8 +44,8 @@ function postar() {
         url: url
       }
       
-   firebase.firestore()
-      .collection('projetos')
+    database
+      .collection("projetos/")
       .add(obj)
       .then(()=>{
         loadingOut();
