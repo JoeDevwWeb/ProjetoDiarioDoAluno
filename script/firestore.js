@@ -17,7 +17,7 @@ file.addEventListener('change', (event) =>{
   leitor.readAsDataURL(file.files[0]);
 })
 
-function postar() {
+async function postar() {
   
   let titulo = document.getElementById('titulo').value;
   let nomeAutor = document.getElementById('nomeAutor').value;
@@ -25,13 +25,13 @@ function postar() {
   let arquivo = document.getElementById('arquivo').files[0];
   loading();
 
-   storage
+   await storage
    .ref('projetos/')
    .child(arquivo.name)
    .put(arquivo);
   
   
-  storage
+  await storage
     .ref('projetos/')
     .child(arquivo.name)
     .getDownloadURL()
